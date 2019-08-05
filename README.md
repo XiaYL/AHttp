@@ -28,12 +28,12 @@ step2：生成接口方法，类似retrofit的接口生成，可参照如下例�
         SimpleSubscription todayVideo(@AParamMap Map<String, String> map);
     }
 
-可用的注解：
-APath：请求路径注解
-AMock：mock地址
-AParam，AParamMap：请求参数
-AFile，AFileMap：上传附件参数
-AFilePath：文件下载存放路径
+    可用的注解：
+    APath：请求路径注解
+    AMock：mock地址
+    AParam，AParamMap：请求参数
+    AFile，AFileMap：上传附件参数
+    AFilePath：文件下载存放路径
 
 step3：根据接口访问服务
 
