@@ -23,10 +23,10 @@ step1：初始化，调用AHttpClient.init(IAHttpClient iAHttpClient)初始化�
     
 step2：生成接口方法，类似retrofit的接口生成，可参照如下例子，目前仅支持返回SimpleSubscription
 
-public interface OpenApi {
-    @APath("todayVideo")
-    SimpleSubscription todayVideo(@AParamMap Map<String, String> map);
-}
+    public interface OpenApi {
+        @APath("todayVideo")
+        SimpleSubscription todayVideo(@AParamMap Map<String, String> map);
+    }
 
 可用的注解：
 APath：请求路径注解
@@ -37,7 +37,7 @@ AFilePath：文件下载存放路径
 
 step3：根据接口访问服务
 
-ApiProxy.newProxyInstance(OpenApi.class)
+    ApiProxy.newProxyInstance(OpenApi.class)
                         .todayVideo(null)
                         .clazzConverter(TodayVideoBean.class) //将请求结果直接转换成实体类，需要配置IJsonParser
                         .subscribe(new SimpleSubscriber<TodayVideoBean>(){
