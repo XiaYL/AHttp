@@ -1,0 +1,16 @@
+def supportNamespace = "com.android.support";
+ext {
+    configs = [
+            compileSdkVersion: 24,
+            buildToolsVersion: "25.0.0",
+            minSdkVersion    : 19,
+            targetSdkVersion : 21
+    ]
+    supportVersion = "24.2.1"
+    supportLibs = [
+            supportV4  : "$supportNamespace:support-v4:$supportVersion",
+            design     : "$supportNamespace:design:$supportVersion",
+            annotations: "$supportNamespace:support-annotations:$supportVersion",
+            appcompat : "$supportNamespace:appcompat-v7:$supportVersion"
+    ]
+}
